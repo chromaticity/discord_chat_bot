@@ -35,9 +35,10 @@ async def on_message(message):
             for member in server.members:
                 tmpArr.append(member)
         arrInd = len(tmpArr)
-        randInd = randint(0, arrInd)
+        randInd = randint(0, arrInd - 1)
         targetedUser = tmpArr[randInd]
-        await bot.send_message(message.channel, "BANG BANG!!!! {} is dead!".format(targetedUser))
+        formattedUser = str(targetedUser).split("#")[0]
+        await bot.send_message(message.channel, "BANG BANG!!!! {} is dead!".format(formattedUser))
 
 
-bot.run('')
+bot.run('MTk2ODM0OTA4MzEwNzMyODAw.ClNU7A.LJ5RHATx2ZS1lUtwcKXdB9galUE')
