@@ -18,7 +18,7 @@ async def on_ready():
     print(bot.user.id)
     print(bot.is_logged_in)
     print('------')
-    bot.change_presence(game="Python 3.5.2", status=None, afk=False)
+    bot.change_presence(game=discord.Game(name="Python 3.5.2"), status=None, afk=False)
 
 @bot.event
 async def on_message(message):
