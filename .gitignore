@@ -1,0 +1,11 @@
+.idea/
+*.pyc
+~*/
+
+audio_cache/
+dectalk/
+
+nohup.out
+discord.log
+config/options.ini
+config/permissions.ini

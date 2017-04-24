@@ -6,9 +6,8 @@ import discord
 from discord.ext import commands
 import random
 from random import randint
-import spotipy
-import spotipy.util as util
 import sys
+import os
 
 bot = discord.Client()
 
@@ -19,6 +18,7 @@ async def on_ready():
     print(bot.user.id)
     print(bot.is_logged_in)
     print('------')
+    bot.change_presence(game="Python 3.5.2", status=None, afk=False)
 
 @bot.event
 async def on_message(message):
@@ -46,24 +46,6 @@ async def on_message(message):
         formattedUser = str(targetedUser).split("#")[0]
         await bot.send_message(message.channel, "BANG BANG!!!! {} is dead!".format(formattedUser))
 
-    elif message.content.startswith('!toptracks'):
-        # remember that you need to export the client id and all that other shit to the server...
-        # as env variables
-        # like so: 
-        await bot.send_message(message.channel, "Brandon's Top 5 Tracks - Time Period: Whenever")
-        token = util.prompt_for_user_token("chroma_0", "user-top-read")
-
-        if token:
-            sp = spotipy.Spotify(auth=token)
-            results = sp.current_user_top_tracks(limit=5)
-            for item in results['items']:
-                track = item['name']
-                artist = item['artists'][0]['name']
-                # print(track['name'] + ' - ' + track['artists'][0]['name'])
-                await bot.send_message(message.channel, track + " - " + artist)
-        else:
-            print("Can't get token for", username)
-
     elif message.content.startswith('!funfact'):
         # update this array
         funFacts = ["Fun Fact: McIlhenny loves Perl.", "Fun Fact: CSUN is fucking garbage", "Fun Fact: Rafi taught me how 2 hack", 
@@ -77,6 +59,9 @@ async def on_message(message):
         funFact = funFacts[randNum]
         # print fun fact i guess
         await bot.send_message(message.channel, funFact)
+   
+    elif message.content.startswith('!starttheparty'):
+        os.system("cd /bots/discord_chat_bot && python3.5 run.py &");
 
 # get this api key from discord's site when you're logged in...
-bot.run('')
+bot.run('MjI4OTQwNjM2NDE2Mzc2ODQz.C19CxQ.BBA7kvgPuUkP-kqH8rzX0jZ71k4')
