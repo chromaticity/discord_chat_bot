@@ -64,4 +64,4 @@ async def on_message(message):
         os.system("cd /bots/discord_chat_bot && python3.5 run.py &");
 
 # get this api key from discord's site when you're logged in...
-bot.run('MjI4OTQwNjM2NDE2Mzc2ODQz.C19CxQ.BBA7kvgPuUkP-kqH8rzX0jZ71k4')
+bot.run('MjI4OTQwNjM2NDE2Mzc2ODQz.C97x7w.a-Xlyq3MTF6xQy4HhLPRfEOhLVQ')
