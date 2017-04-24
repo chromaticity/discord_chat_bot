@@ -1,0 +1,31 @@
+[Credentials]
+Token = BOT TOKEN GOES HERE, WITHOUT ANY QUOTES
+
+[Permissions]
+OwnerID = 143228041068281858
+
+[Chat]
+CommandPrefix = !
+
+[MusicBot]
+DefaultVolume = 0.15
+WhiteListCheck = no
+
+SkipsRequired = 4
+SkipRatio = 0.5
+
+SaveVideos = yes
+
+NowPlayingMentions = no
+
+AutoSummon = yes
+
+UseAutoPlaylist = yes
+
+AutoPause = yes
+
+DeleteMessages = yes
+
+DeleteInvoking = no
+
+DebugMode = no
