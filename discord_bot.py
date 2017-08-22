@@ -18,7 +18,7 @@ async def on_ready():
     print(bot.user.id)
     print(bot.is_logged_in)
     print('------')
-    bot.change_presence(game=discord.Game(name="Python 3.5.2"), status=None, afk=False)
+    await bot.change_presence(game=discord.Game(name="Python 3.5.2"))
 
 @bot.event
 async def on_message(message):
@@ -64,4 +64,4 @@ async def on_message(message):
         os.system("cd /bots/discord_chat_bot && python3.5 run.py &");
 
 # get this api key from discord's site when you're logged in...
-bot.run('MjI4OTQwNjM2NDE2Mzc2ODQz.C97x7w.a-Xlyq3MTF6xQy4HhLPRfEOhLVQ')
+bot.run('')
